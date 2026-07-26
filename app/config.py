@@ -8,7 +8,12 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-GOOGLE_API_KEY = os.getenv("GOOGLE_API_KEY", "")
+try:
+    import streamlit as st
+    GOOGLE_API_KEY = st.secrets.get("GOOGLE_API_KEY", os.getenv("GOOGLE_API_KEY", ""))
+except Exception:
+    GOOGLE_API_KEY = os.getenv("GOOGLE_API_KEY", "")
+    
 LLM_MODEL = os.getenv("LLM_MODEL", "gemini-3.1-flash-lite")
 
 VECTOR_DB = os.getenv("VECTOR_DB", "chroma")

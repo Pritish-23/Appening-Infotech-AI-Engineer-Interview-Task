@@ -8,6 +8,12 @@ To Run:
 import streamlit as st
 from app.graph import ask
 from app import config
+import os
+
+if not os.path.exists(config.CHROMA_PERSIST_DIR) or not os.listdir(config.CHROMA_PERSIST_DIR):
+    with st.spinner("First-time setup: downloading and indexing the eBook (this may take a minute)..."):
+        from app.ingest import run as run_ingest
+        run_ingest()
 
 st.set_page_config(page_title="Agentic AI eBook Chatbot", page_icon="🤖", layout="wide")
 
