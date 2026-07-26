@@ -5,10 +5,15 @@ To Run:
     python -m streamlit run app/streamlit_app.py
 """
 
+
+import sys
+import os
+
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+
 import streamlit as st
 from app.graph import ask
 from app import config
-import os
 
 if not os.path.exists(config.CHROMA_PERSIST_DIR) or not os.listdir(config.CHROMA_PERSIST_DIR):
     with st.spinner("First-time setup: downloading and indexing the eBook (this may take a minute)..."):
