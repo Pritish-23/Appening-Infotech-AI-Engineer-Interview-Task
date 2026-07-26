@@ -46,7 +46,7 @@ Exposed via:
 ```bash
 git clone https://github.com/Pritish-23/Appening-Infotech-AI-Engineer-Interview-Task.git
 
-cd rag-app
+cd Appening-Infotech-AI-Engineer-Interview-Task
 
 pip install -r requirements.txt
 ```
