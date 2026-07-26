@@ -6,7 +6,7 @@ local sentence-transformer embeddings, and **Google Gemini**.
 
 Built as part of the AI Engineer Intern interview task for Appening Infotech.
 
- **Live demo:** [your-app-name.streamlit.app](https://appening-infotech-ai-engineer-interview-task.streamlit.app)
+ **Live demo:** [appening-infotech-ai-engineer-interview-task.streamlit.app](https://appening-infotech-ai-engineer-interview-task.streamlit.app)
 
 ---
 
